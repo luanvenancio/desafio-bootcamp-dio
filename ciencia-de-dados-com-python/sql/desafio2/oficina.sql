@@ -90,10 +90,10 @@ CREATE TABLE Pecas (
 );
 
 CREATE TABLE Ordem_Servico_Pecas (
-    idOsPecas INT AUTO_INCREMENT PRIMARY KEY,
-    CONSTRAINT fk_pecas FOREIGN KEY (idOsPecas)
+    idOrdemServicoPecas INT AUTO_INCREMENT PRIMARY KEY,
+    CONSTRAINT fk_pecas FOREIGN KEY (idOrdemServicoPecas)
         REFERENCES Pecas (idPecas),
-    CONSTRAINT fk_os_pecas FOREIGN KEY (idOsPecas)
+    CONSTRAINT fk_os_pecas FOREIGN KEY (idOrdemServicoPecas)
         REFERENCES Ordem_Servico (idOrdemServico)
 );
 
