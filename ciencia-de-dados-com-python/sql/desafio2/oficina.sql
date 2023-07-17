@@ -89,7 +89,7 @@ CREATE TABLE Pecas (
     Valor FLOAT NOT NULL
 );
 
-CREATE TABLE OsPecas (
+CREATE TABLE Ordem_Servico_Pecas (
     idOsPecas INT AUTO_INCREMENT PRIMARY KEY,
     CONSTRAINT fk_pecas FOREIGN KEY (idOsPecas)
         REFERENCES Pecas (idPecas),
