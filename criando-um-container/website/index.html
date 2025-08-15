@@ -1,0 +1,45 @@
+    
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação Containerizada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="whale-icon">🐳</span>
+            <h1>Aplicação em um Container Docker</h1>
+        </div>
+        <p>Esta página é servida dinamicamente por um servidor <strong>Apache HTTPD</strong>, executando dentro de um container Docker.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Como isso funciona?</h2>
+            <p>O <strong>Docker Compose</strong> orquestrou a criação deste ambiente. Ele leu o arquivo <code>docker-compose.yml</code>, baixou a imagem <code>httpd:latest</code> e "montou" o volume com os arquivos deste site (HTML, CSS, JS) para que o Apache pudesse servi-los.</p>
+            <button id="toggle-details-btn">Mostrar Detalhes do Stack</button>
+            <div id="tech-details" class="details-hidden">
+                <h3>Tecnologias Envolvidas:</h3>
+                <ul>
+                    <li><strong>Docker Compose:</strong> Orquestração do container.</li>
+                    <li><strong>Apache HTTPD:</strong> Servidor web que entrega esta página.</li>
+                    <li><strong>HTML5:</strong> Estrutura do conteúdo.</li>
+                    <li><strong>CSS3:</strong> Estilização e design responsivo.</li>
+                    <li><strong>JavaScript:</strong> Interatividade (como este botão!).</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+  
